@@ -1,0 +1,21 @@
+include ./menu-item/header_menu-item
+include ./button/button
+
+mixin header(options)
+
+  - var headerClassName = options.name
+    header(class=headerClassName)
+      .page-header__logo
+        .page-header__logo-image
+        .page-header__logo-text
+      ul.page-header__menu
+
+        +header_menu-item({title:"О нас"})
+        +header_menu-item({title:"Услуги"})
+        +header_menu-item({title:"Вакансии"})
+        +header_menu-item({title:"Новости"})
+        +header_menu-item({title:"Соглашения"})
+            
+      +btn({title:"Войти"})
+      +btn({title:"Зарегистрироваться"})
+      

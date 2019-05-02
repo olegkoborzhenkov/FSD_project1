@@ -1,0 +1,18 @@
+.resume-section__title {
+  color: red;
+  background-image: url("/img/PROFILE_ICON.png");
+}
+
+.resume-section__title::before{
+
+  content: "";
+    
+  width: 154px;
+  height: 154px;
+
+  background-image: url("/img/PROFILE_ICON.png");
+
+}
+.resume-header {
+  background-image: url("/img/PROFILE_ICON.png");
+}
