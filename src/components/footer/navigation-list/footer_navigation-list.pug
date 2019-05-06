@@ -1,0 +1,12 @@
+mixin footer_navigation-list(title, options)
+
+  - var sectionClassName = "page-footer__navigation"
+  - var titleClassName = "page-footer__navigation-list__title"
+  - var listClassName = "page-footer__navigation-list"
+  section(class=sectionClassName)
+    h3(class=titleClassName)=title
+    ul(class=listClassName)
+      each option in options
+        li
+          a(href=option.href)=option.text
+  

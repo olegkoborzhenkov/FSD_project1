@@ -1,4 +1,6 @@
+include ./navigation-list/footer_navigation-list
 include ./menu-item/footer_menu-item
+
 
 mixin footer(options)
 
@@ -11,11 +13,7 @@ mixin footer(options)
             | Бронирование номеров в лучшем
             | отеле 2019 года по версии
             | ассоциации "Отельные взгляды"
-
-      ul.page-footer__navigation
-
-        +footer_menu-item({title:"О нас"})
-        +footer_menu-item({title:"Новости"})
-        +footer_menu-item({title:"Служба поддержки"})
-        +footer_menu-item({title:"Услуги"})
+ 
+      +footer_navigation-list( "Навигация", [ {href: "#", text: "О нас"},{href: "#", text: "Новости"},{href: "#", text: "Служба поддержки"},{href: "#", text: "Услуги"} ] )      
+        
       
