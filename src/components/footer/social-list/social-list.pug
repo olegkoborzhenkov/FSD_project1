@@ -1,0 +1,11 @@
+mixin social-list(options)
+
+  - var sectionClassName = "page-footer__social"
+  - var listClassName = "social__list"
+  - var linkClassName = "social__link"
+  div(class=sectionClassName)
+    ul(class=listClassName)
+      each option in options
+        li
+          a(class=linkClassName, href=option.href)=option.text
+  

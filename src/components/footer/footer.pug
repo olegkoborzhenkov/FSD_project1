@@ -1,19 +1,35 @@
 include ./navigation-list/footer_navigation-list
 include ./menu-item/footer_menu-item
+include ./social-list/social-list
 
 
 mixin footer(options)
 
   - var footerClassName = "page-footer"
     footer(class=footerClassName)
-      .page-footer__logo
-        .page-footer__logo-image
-        .page-footer__logo-text
-          p
-            | Бронирование номеров в лучшем
-            | отеле 2019 года по версии
-            | ассоциации "Отельные взгляды"
+      .page-footer__wrapper
+        .page-footer__top
+          .page-footer__logo
+            .page-footer__logo-image
+            .page-footer__logo-text
+              p
+                | Бронирование номеров в лучшем
+                | отеле 2019 года по версии
+                | ассоциации "Отельные взгляды"
  
-      +footer_navigation-list( "Навигация", [ {href: "#", text: "О нас"},{href: "#", text: "Новости"},{href: "#", text: "Служба поддержки"},{href: "#", text: "Услуги"} ] )      
-        
+          +footer_navigation-list( "Навигация", [ {href: "#", text: "О нас"},{href: "#", text: "Новости"},{href: "#", text: "Служба поддержки"},{href: "#", text: "Услуги"} ] )
+          +footer_navigation-list( "О нас", [ {href: "#", text: "О сервисе"},{href: "#", text: "Наша команда"},{href: "#", text: "Вакансии"},{href: "#", text: "Инвесторы"} ] )
+          +footer_navigation-list( "Служба поддержки", [ {href: "#", text: "Соглашения"},{href: "#", text: "Сообщества"},{href: "#", text: "Связь с нами"} ] )   
+          section.page-footer__subscription   
+            p
+              | Получайте специальные
+              | предложения и новости сервиса
+            form.page-footer__subscription__form(method="POST" action="#")
+              input.subscription__form__email(type="text", name="field_name")
+              input.subscription__form__button(type="submit", value="Подписаться", name="submit_button")
+            
+        .page-footer__bottom
+          .page-footer__copyright
+            p Copyright 2018 Toxin отель. Все права защищены.
+          +social-list([{href: "#", text: "Мы в Твиттер"},{href: "#", text: "Мы в Фейсбук"},{href: "#", text: "Мы в Инстаграмм"}])
       
