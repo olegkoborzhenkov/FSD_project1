@@ -1,5 +1,6 @@
 // Webpack v4
-const path = require('path');
+const path = require('path')
+
 //const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 //const WebpackMd5Hash = require('webpack-md5-hash');
@@ -34,7 +35,7 @@ module.exports = {
   },
   plugins: [
    // new ExtractTextPlugin(
-   //   {filename: 'style.[hash].css', disable: falsr, allChunks: true}
+   //   {filename: 'style.[hash].css', disable: false, allChunks: true}
    //   ),
     new MiniCssExtractPlugin({
       filename: 'style.css',
@@ -42,8 +43,8 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
-      template: 'src/index.pug',
-      filename: 'index.html'
-    })//,new WebpackMd5Hash()  
+      filename: 'index.html',
+      template: 'src/index.pug'
+    })//,new WebpackMd5Hash()     
   ]
 };

@@ -1,0 +1,16 @@
+mixin catalog-main(options)
+
+  - var mainClassName = options.name
+    main(class=mainClassName)=options.name
+      section.option-column
+        .option-column__date-of-stay
+        .option-column__guests
+        .option-column__price-range
+        .option-column__checkbox-buttons
+        .option-column__availability
+        .option-column__facilities
+      section.result-column
+        h2.result-column__header Номера, которые мы для вас подобрали
+        .result-column__hotel-numbers
+          
+      

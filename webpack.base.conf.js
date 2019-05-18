@@ -56,6 +56,12 @@ module.exports = {
       template: 'src/index.pug',
       filename: 'index.html'
     }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: false,
+      template: 'src/catalog.pug',
+      filename: 'catalog.html'
+    }),
     new CopyWebpackPlugin([
       { from: './src/img', to: './img' }
     ])//,new WebpackMd5Hash()  
