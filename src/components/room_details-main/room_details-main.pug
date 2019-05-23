@@ -1,0 +1,17 @@
+mixin room_details-main(options)
+
+  - var mainClassName = options.name
+    main(class=mainClassName)
+      section.image-column
+        .image-column__main-picture
+        .image-column__small-pictures
+      section.details-column
+        .details-column__information-block
+          .number-information
+          .number-impressions
+          .number-comments
+          .number-rules
+          .number-cancellation
+        .details-column__calculator-block
+          .number-calculator  
+      

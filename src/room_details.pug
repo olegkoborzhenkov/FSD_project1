@@ -1,0 +1,22 @@
+include ./components/header/header
+include ./components/room_details-main/room_details-main
+include ./components/footer/footer
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title Макет резюме
+    link(rel="stylesheet", href="style.css")
+
+  body
+      .wrapper
+        +header({name:"page-header"})
+        +room_details-main({name:"room_details-main"})
+        +footer({name:"page-footer"})
+        
+        
+          
+        
+      
+
